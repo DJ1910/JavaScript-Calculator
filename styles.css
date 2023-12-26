@@ -1,0 +1,157 @@
+body {
+  margin: 0;
+}
+
+#wrapper {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(127, 0, 255, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+#calculator {
+  border-radius: 10px;
+  border: 2px solid black;
+  padding: 5px;
+  width: 350px;
+  height: 500px;
+  background-color: rgba(255, 255, 0, 0.9);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  grid-template-areas: 
+    'display-container display-container display-container display-container'
+    'clear clear divide multiply'
+    'seven eight nine subtract'
+    'four five six add'
+    'one two three equals'
+    'decimal zero zero equals';
+  justify-items: stretch;
+  align-items: strectch;
+  grid-gap: 1px;
+}
+
+button {
+  font-family: 'Share Tech Mono', 'monospace';
+  font-size: 24px;
+  background-color: white;
+  outline: none;
+  border-color: orange;
+  box-shadow: 0px 0px 2px 0.25px red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button:active {
+  box-shadow: none;
+  background-color: orange;
+}
+
+#display-container {
+  border-color: blue;
+  box-shadow: 0px 0px 2px 0.5px blue;
+  width: calc(100% - 10px);
+  height: calc(100% - 15px);
+  background-color: white;
+  padding: 5px;
+  grid-area: display-container;
+  text-align: right;
+}
+
+#history {
+  margin-bottom: 10px;
+  font-size: 26px;
+  font-family: 'Share Tech Mono', 'monospace';
+  color: rgba(200, 0, 20);
+}
+
+#display {
+  font-size: 34px;
+  font-family: 'Share Tech Mono', 'monospace';
+  color: navy;
+}
+
+#clear {
+  grid-area: clear;
+  background-color: rgba(255, 0, 0, 0.7);
+}
+
+#clear:active {
+  box-shadow: none;
+  background-color: red;
+}
+
+#divide {
+  grid-area: divide;
+}
+
+#multiply {
+  padding-top: 15px;
+  grid-area: multiply;
+}
+
+#seven {
+  grid-area: seven;
+}
+
+#eight {
+  grid-area: eight;
+}
+
+#nine {
+  grid-area: nine;
+}
+
+#subtract {
+  grid-area: subtract;
+}
+
+#four {
+  grid-area: four;
+}
+
+#five {
+  grid-area: five;
+}
+
+#six {
+  grid-area: six;
+}
+
+#add {
+  grid-area: add;
+}
+
+#one {
+  grid-area: one;
+}
+
+#two {
+  grid-area: two;
+}
+
+#three {
+  grid-area: three;
+}
+
+#equals {
+  background-color: rgba(0, 255, 20, 0.7);
+  grid-area: equals;
+}
+
+#equals:active {
+  box-shadow: none;
+  background-color: green;
+}
+
+#decimal {
+  grid-area: decimal;
+}
+
+#zero {
+  grid-area: zero;
+}
